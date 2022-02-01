@@ -4,11 +4,52 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/640ac02c21.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/styles.css">
   <title>Jimenez Landscaping</title>
 </head>
-<body>
-  <div class="w-full h-screen bg-yellow-100"></div>
+<body class="font-Quicksand">
+  <!-- Header -->
+  <header>
+    <nav class="container flex items-center py-4 mt-0 sm:mt-0">
+      <div class="py-1">
+        Salvador Jimenez Ortega | Owner
+      </div>
+      <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-bookmark-blue uppercase text-xs">
+        <li class="cursor-pointer">Services</li>
+        <li class="cursor-pointer">Clients</li>
+        <li class="cursor-pointer">Contact</li>
+      </ul>
+      <div class="flex sm:hidden flex-1 justify-end">
+        <i class="text-2xl fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+  <!-- Hero -->
+  <div class="bg-cover w-full relative">
+    <img class="absolute inset-0 h-full w-full object-cover" src="../images/landscapeShowcase.jpg">
+    <div class="absolute inset-0 bg-gray-300/80"></div>
+    <div class="container flex flex-col items-center py-[40px] md:py-[128px] text-center relative">
+      <img class="w-[175px]" src="../images/jimenez-logo.png" alt="jimenez logo">
+      <h1 class="text-4xl md:text-5xl mb-3 text-primary-text ">
+        Jimenez Landscaping
+      </h1>
+      <p class="max-w-[500px] md:max-w-[700px] text-[14px] md:text-[18px] text-primary-text mb-16 font-bold">
+        A family owned landscaping business that has serviced residents around the Austin area for over 5 years. We will make your home in harmony with its natural environment!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <button class="btn bg-button-primary">
+          List of Services
+        </button>
+        <button class="btn bg-button-secondary">
+          Free Quote
+        </button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
 
