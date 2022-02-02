@@ -5,3 +5,9 @@
 .btn {
   @apply py-3 px-7 rounded-full shadow-md text-white;
 }
+
+#top-page {
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+}
