@@ -580,6 +580,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.75rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .block {
   display: block;
 }
@@ -845,8 +849,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 #top-page {
   position: fixed;
-  bottom: 30px;
-  right: 15px;
+  bottom: 70px;
+  right: 30px;
+}
+
+footer {
+  background: black;
+  padding: 1em;
+  margin-top: 1em;
+  height: 4em;
+  display: flex;
+  place-content: end center;
+}
+
+footer p {
+  margin: 0;
+  padding-left: 20px;
+  color: white;
+  font-size: .9em;
 }
 
 @media (min-width: 640px) {

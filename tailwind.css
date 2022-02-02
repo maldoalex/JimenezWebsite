@@ -8,6 +8,24 @@
 
 #top-page {
   position: fixed;
-  bottom: 30px;
-  right: 15px;
+  bottom: 70px;
+  right: 30px;
+}
+
+footer {
+  background: black;
+  padding: 1em;
+  margin-top: 1em;
+  height: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: end center;
+}
+
+footer p {
+  margin: 0;
+  padding-left: 20px;
+  color: white;
+  font-size: .9em;
 }

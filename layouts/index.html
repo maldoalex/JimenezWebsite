@@ -18,9 +18,9 @@
       <div id="home" class="py-1">
         Salvador Jimenez Ortega | Owner
       </div>
-      <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
+      <!-- <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
           aria-expanded="false">Menu</span>
-      </button>
+      </button> -->
       <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-bookmark-blue uppercase text-xs">
         <li class="cursor-pointer"><a href="#services">Services</a></li>
         <li class="cursor-pointer"><a href="#clients">Clients</a></li>
@@ -45,11 +45,8 @@
         A family owned landscaping business that has serviced residents around the Austin area for over 5 years. We will make your home in harmony with its natural environment!
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
-        <button class="btn bg-button-primary">
-          List of Services
-        </button>
-        <button class="btn bg-button-secondary">
-          Free Quote
+        <button class="btn bg-button-primary"><a href="#services">List of Services</a></button>
+        <button class="btn bg-button-secondary"><a href="#contact">Free Quote</a>
         </button>
       </div>
     </div>
@@ -188,7 +185,8 @@
   
   
   <!-- Contact me -->
-  <div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+  
+  <div class="container mt-14 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
     <section class="w-full">
       <h2 id="contact" class="secondary-title">Contact me</h2>
       <p class="section-paragraph">For a free quote feel free to to contact me any time, through any method below.</p>
@@ -196,19 +194,22 @@
       <div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-24">
         <div class="space-y-12">
           <div>
-            <label class="text-black block mb-6 text-xl font-bold">Name</label>
-            <input class="text-black w-full border border-input-border bg-input px-4 py-4">
+          <form action="https://formsubmit.co/maldoalex@gmail.com" method="POST">
+            <label for="name" class="text-black block mb-6 text-xl font-bold">Name</label>
+            <input type="text" id="name" name="name" class="text-black w-full border border-input-border bg-input px-4 py-4">
           </div>
           <div>
-            <label class="text-black block mb-6 text-xl font-bold">Email</label>
-            <input type="email" class="text-black w-full border border-input-border bg-input px-4 py-4">
+            <label for="email" class="text-black block mb-6 text-xl font-bold">Email</label>
+            <input type="email" id="email" name="email" class="text-black w-full border border-input-border bg-input px-4 py-4">
           </div>
           <div>
-            <label class="text-black block mb-6 text-xl font-bold">Message</label>
-            <textarea type="email"
-              class=" text-black w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"></textarea>
+            <label for="message" class="text-black block mb-6 text-xl font-bold">Message</label>
+            <textarea name="message" id="message"
+              class="text-black w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"></textarea>
           </div>
-          <button class="px-6 py-2 bg-button-secondary text-white font-bold">Send it!</button>
+          <input id="btn-submit" type="submit" class="px-6 py-2 bg-button-secondary text-white font-bold" value="Send Message">
+          <input type="hidden" name="_captcha" value="false">
+          </form>
         </div>
   
         <div class="mt-12">
@@ -222,7 +223,40 @@
   
     </section>
   </div>
-    
+  <!-- FOOTER************************************* -->
+  <footer>
+    <!-- <div class="container"> -->
+    <img class="logo" src="/images/AM.svg" alt="">
+    <div>
+      <p>Alejandro Maldonado |</p>
+      <p>Web Development</p>
+    </div>
+    <!-- </div> -->
+  </footer>
+
+  <script>
+    const btn = document.getElementById('btn-submit');
+
+    btn.addEventListener('click', function handleClick(event) {
+      // 👇️ if you are submitting a form (prevents page reload)
+      event.preventDefault();
+
+      alert("Thank you! Your message was sent!");
+
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+
+      // Send value to server
+      // console.log(firstNameInput.value);
+
+      // 👇️ clear input field
+      nameInput.value = '';
+      emailInput.value = '';
+      messageInput.value = '';
+    });
+
+  </script>
 </body>
 </html>
 
