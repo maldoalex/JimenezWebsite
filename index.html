@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/640ac02c21.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="./layouts/css/styles.css">
+  <!-- <script src="../emailForm.js" defer></script> -->
   <title>Jimenez Landscaping</title>
 </head>
 <body class="font-Quicksand">
@@ -34,10 +34,10 @@
 
   <!-- Hero -->
   <div class="bg-cover w-full relative">
-    <img class="absolute inset-0 h-full w-full object-cover" src="../images/landscapeShowcase.jpg">
+    <img class="absolute inset-0 h-full w-full object-cover" src="./images/landscapeShowcase.jpg">
     <div class="absolute inset-0 bg-gray-300/80"></div>
     <div class="container flex flex-col items-center py-[40px] md:py-[128px] text-center relative">
-      <img class="w-[175px]" src="../images/jimenez-logo.png" alt="jimenez logo">
+      <img class="w-[175px]" src="./images/jimenez-logo.png" alt="jimenez logo">
       <h1 class="text-4xl md:text-5xl mb-3 text-primary-text ">
         Jimenez Landscaping
       </h1>
@@ -63,39 +63,39 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mb-10">
         <div>
           <p>Lawn Care</p>
-          <img src="../images/lawncare2.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
+          <img src="./images/lawncare-main.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
         </div>
         <div>
           <p>Landscaping</p>
-          <img src="../images/landscaping2.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
+          <img src="./images/landscape-main.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
         </div>
         <div>
-          <p>Sod Installation</p>
-          <img src="../images/sod.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
+          <p>Sod & Planting</p>
+          <img src="./images/plants.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
+        </div>
+        <div>
+          <p>Flower Maintenance</p>
+          <img src="./images/flowerbed.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
+        </div>
+        <div>
+          <p>Gravel & Brick Work</p>
+          <img src="./images/masonrygravel.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
         </div>
         <div>
           <p>Tree Trimming</p>
-          <img src="../images/treetrim.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
-        </div>
-        <div>
-          <p>Tree Removal</p>
-          <img src="../images/treeremoval.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
-        </div>
-        <div>
-          <p>Hedge Trimming</p>
-          <img src="../images/hedgetrim.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
+          <img src="./images/treetrimming.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
         </div>
         <div>
           <p>Sprinkler & Irrigation</p>
-          <img src="../images/sprinkler.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
+          <img src="./images/sprinkler.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
         </div>
         <div>
           <p>Deck & Pergola Remodeling</p>
-          <img src="../images/deckpergola.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
+          <img src="./images/deckpergola.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
         </div>
         <div>
-          <p>Masonry & Brickwork</p>
-          <img src="../images/masonry.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
+          <p>Masonry</p>
+          <img src="./images/masonry.jpg" class="w-full bg-nav h-36 lg:h-72 object-cover">
         </div>
       </div>
     </section>
@@ -185,16 +185,39 @@
   
   
   <!-- Contact me -->
+  <section class="container mt-14 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full" id="contact">
+    <div class="full">
+      <h1 id="contact" class="text-3xl text-center text-primary-text">Contact</h1>
+      <p class="text-center text-primary-text mt-4">For a free quote contact me any time, through any method below.
+      </p>
+      <hr class="border-b border-secondary-yellow mx-10">
+
+      <form action="https://formsubmit.co/maldoalex@gmail.com" method="POST">
+        <label for="name" class="text-black block mb-6 text-xl font-bold">Name</label>
+        <input type="text" id="name" name="name" class="text-black w-full border border-input-border bg-input px-4 py-4">
+        <label for="email" class="text-black block mb-6 text-xl font-bold">Email</label>
+        <input type="email" id="email" name="email" class="text-black w-full border border-input-border bg-input px-4 py-4">
+        <label for="message" class="text-black block mb-6 text-xl font-bold">Message</label>
+        <textarea name="message" id="message"
+        class="text-black w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"></textarea>
+        <input id="btn-submit" type="submit" class="px-6 py-2 bg-button-secondary text-white font-bold cursor-pointer" value="Send Message">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://landscapingjimenez.com/messageSent.html">
+      </form>
+    </div>
+  </section>
   
-  <div class="container mt-14 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+  <!-- <div class="container mt-14 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
     <section class="w-full">
-      <h2 id="contact" class="secondary-title">Contact me</h2>
-      <p class="section-paragraph">For a free quote feel free to to contact me any time, through any method below.</p>
+      <h1 id="contact" class="text-3xl text-center text-primary-text">Contact</h1>
+      <p class="text-center text-primary-text mt-4">For a free quote contact me any time, through any method below.
+      </p>
+      <hr class="border-b border-secondary-yellow mx-10">
   
       <div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-24">
         <div class="space-y-12">
           <div>
-          <form action="https://formsubmit.co/maldoalex@gmail.com" method="POST">
+          <form action="https://formspree.io/f/xeqnazgv" method="POST">
             <label for="name" class="text-black block mb-6 text-xl font-bold">Name</label>
             <input type="text" id="name" name="name" class="text-black w-full border border-input-border bg-input px-4 py-4">
           </div>
@@ -213,7 +236,6 @@
         </div>
   
         <div class="mt-12">
-          <!-- Contact info -->
           <p class="text-secondary">737-280-7427</p>
           <a href="mailto:email@mydomain.com"
             class="text-secondary underline mt-3 block">jimenez_landscaping1@yahoo.com</a>
@@ -222,7 +244,9 @@
       </div>
   
     </section>
-  </div>
+  </div> -->
+
+
   <!-- FOOTER************************************* -->
   <footer>
     <!-- <div class="container"> -->
@@ -234,29 +258,23 @@
     <!-- </div> -->
   </footer>
 
-  <script>
+  <!-- <script>
     const btn = document.getElementById('btn-submit');
 
-    btn.addEventListener('click', function handleClick(event) {
-      // 👇️ if you are submitting a form (prevents page reload)
-      event.preventDefault();
+      btn.addEventListener('click', function handleClick(event) {
+        event.preventDefault();
 
-      alert("Thank you! Your message was sent!");
+        alert("Thank you! Your message was sent!");
 
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const messageInput = document.getElementById('message');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
 
-      // Send value to server
-      // console.log(firstNameInput.value);
-
-      // 👇️ clear input field
-      nameInput.value = '';
-      emailInput.value = '';
-      messageInput.value = '';
-    });
-
-  </script>
+        nameInput.value = '';
+        emailInput.value = '';
+        messageInput.value = '';
+      });
+  </script> -->
 </body>
 </html>
 
